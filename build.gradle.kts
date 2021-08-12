@@ -38,3 +38,12 @@ kotlin.sourceSets["test"].kotlin.srcDirs("test")
 
 sourceSets["main"].resources.srcDirs("resources")
 sourceSets["test"].resources.srcDirs("testresources")
+
+tasks {
+    compileKotlin {
+        kotlinOptions.jvmTarget = "1.8"
+    }
+    compileTestKotlin {
+        kotlinOptions.jvmTarget = "1.8"
+    }
+}
